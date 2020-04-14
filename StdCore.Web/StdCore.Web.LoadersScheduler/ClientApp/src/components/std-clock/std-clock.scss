@@ -1,0 +1,10 @@
+﻿.clock {
+    border: 1px solid $_borderColor;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px 10px;
+    height: 38px;
+    font-family: $_fontFamily;
+    font-size: 15px;
+}

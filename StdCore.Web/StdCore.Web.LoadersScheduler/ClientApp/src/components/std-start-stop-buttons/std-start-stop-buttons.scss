@@ -1,0 +1,15 @@
+﻿.wrapper {
+    .fieldset {
+        font: normal 14px/24px "PT sans",sans-serif;
+        font-size: 16px;
+        padding-top: 0;
+
+        & > * {
+            margin-bottom: 5px;
+        }
+    }
+
+    .buttons-wrapper {
+        display: flex;
+    }
+}

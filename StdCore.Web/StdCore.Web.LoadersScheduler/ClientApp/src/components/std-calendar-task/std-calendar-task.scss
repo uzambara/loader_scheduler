@@ -1,0 +1,54 @@
+﻿.task-container {
+    height: 50px;
+    background-color: #1a73e8;
+    position: absolute;
+    top: 0;
+    width: calc(100% - 5px);
+    border-radius: 5px;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: $_calendarTaskZindex;
+    display: flex;
+    justify-content: center;
+
+    .context-menu-button {
+        position: absolute !important;
+        right: 5px;
+        top: 0;
+        width: 15px;
+        height: 15px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        border-radius: 50%;
+        min-width: 13px;
+    }
+
+    .short-info {
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .context-menu-button-span {
+        width: 2px;
+        height: 2px;
+        background-color: black;
+        border-radius: 50%;
+    }
+
+    .button-label {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .task-status {
+        position: absolute;
+        left: 3px;
+        top: 0;
+        font-size: 10px;
+        font-weight: bold;
+        font: $_fontFamily;
+    }
+}

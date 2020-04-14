@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StdCore.Libs", "StdCore.Libs", "{1938D165-5325-47A3-816D-C91B9602544D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StdCore.Web", "StdCore.Web", "{1847F6A1-0789-4926-8749-F2812F0D0363}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StdCore.Libs.Common", "StdCore.Libs\StdCore.Libs.Common\StdCore.Libs.Common.csproj", "{E9525351-4F64-4CD2-A9D6-AEEBBE79FE0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StdCore.Web.Tests", "StdCore.Web\StdCore.Web.Tests\StdCore.Web.Tests.csproj", "{A401D970-1701-49B6-9238-98673CFBB2FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StdCore.Web.LoadersScheduler", "StdCore.Web\StdCore.Web.LoadersScheduler\StdCore.Web.LoadersScheduler.csproj", "{637AB326-9D31-4526-BE07-921B9D61380F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E9525351-4F64-4CD2-A9D6-AEEBBE79FE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9525351-4F64-4CD2-A9D6-AEEBBE79FE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9525351-4F64-4CD2-A9D6-AEEBBE79FE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9525351-4F64-4CD2-A9D6-AEEBBE79FE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A401D970-1701-49B6-9238-98673CFBB2FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A401D970-1701-49B6-9238-98673CFBB2FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A401D970-1701-49B6-9238-98673CFBB2FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A401D970-1701-49B6-9238-98673CFBB2FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{637AB326-9D31-4526-BE07-921B9D61380F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{637AB326-9D31-4526-BE07-921B9D61380F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{637AB326-9D31-4526-BE07-921B9D61380F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{637AB326-9D31-4526-BE07-921B9D61380F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E9525351-4F64-4CD2-A9D6-AEEBBE79FE0D} = {1938D165-5325-47A3-816D-C91B9602544D}
+		{A401D970-1701-49B6-9238-98673CFBB2FA} = {1847F6A1-0789-4926-8749-F2812F0D0363}
+		{637AB326-9D31-4526-BE07-921B9D61380F} = {1847F6A1-0789-4926-8749-F2812F0D0363}
+	EndGlobalSection
+EndGlobal

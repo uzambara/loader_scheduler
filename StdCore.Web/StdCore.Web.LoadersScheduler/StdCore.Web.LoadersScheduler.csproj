@@ -1,0 +1,73 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>d85f9282-3ac6-4be2-90b9-1a030c7d013e</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <RootNamespace>Std.WebClient</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="9.0.0" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="9.0.0-preview1" />
+    <PackageReference Include="MediatR" Version="8.0.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.1" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.1" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="3.1.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.9.10" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="3.1.1.2" />
+    <PackageReference Include="Serilog" Version="2.9.1-dev-01154" />
+    <PackageReference Include="Serilog.AspNetCore" Version="3.2.1-dev-00142" />
+    <PackageReference Include="Serilog.Settings.Configuration" Version="3.1.1-dev-00216" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\constants" />
+    <Folder Include="ClientApp\src\images" />
+    <Folder Include="Migrations" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="logs\**" />
+    <Compile Remove="ClientApp\node_modules\**" />
+    <Compile Remove="ClientApp\build\build\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="logs\**" />
+    <EmbeddedResource Remove="ClientApp\node_modules\**" />
+    <EmbeddedResource Remove="ClientApp\build\build\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="logs\**" />
+    <None Remove="ClientApp\node_modules\**" />
+    <None Remove="ClientApp\build\build\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="logs\**" />
+    <Content Remove="ClientApp\node_modules\**" />
+    <Content Remove="ClientApp\build\build\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\StdCore.Libs\StdCore.Libs.Common\StdCore.Libs.Common.csproj" />
+  </ItemGroup>
+  <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="IF EXIST &quot;$(ProjectDir)_app_offline.htm&quot; (pushd $(ProjectDir) &amp; copy $(ProjectDir)_app_offline.htm $(ProjectDir)app_offline.htm &amp; popd)" />
+  </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="IF EXIST &quot;$(ProjectDir)\app_offline.htm&quot; (pushd $(ProjectDir) &amp; del $(ProjectDir)\app_offline.htm &amp; popd)" />
+  </Target>
+
+</Project>

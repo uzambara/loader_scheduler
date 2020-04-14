@@ -1,0 +1,129 @@
+﻿.calendarWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calendar-header {
+    display: flex;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    background-color: white;
+    z-index: $_stickyHeaderZindex;
+
+    .calendar-header-column {
+        flex-grow: 1;
+        text-align: center;
+        height: 50px;
+    }
+
+    .calendar-header-logo {
+        background-color: #1a73e8;
+        border-radius: 50%;
+        width: 50px;
+        height: 48px;
+        position: relative;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        align-self: flex-end;
+
+        .week-day {
+            color: white;
+        }
+
+        .day {
+            position: absolute;
+            color: #1a73e8;
+            top: -22px;
+        }
+    }
+
+    .column-link {
+        cursor: pointer;
+        text-decoration: none;
+        color: #70757a;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.calendar-side-scale {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+
+    .current-time-mark {
+        position: absolute;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: red;
+        right: 0;
+        border-radius: 50%;
+        z-index: $_currentTimeMarkZindex;
+    }
+
+    .side-scale-item {
+        position: relative;
+        width: 50px;
+        border-right: 1px solid $_borderColor;
+
+        &:after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 10px;
+            height: 1px;
+            background-color: $_borderColor;
+            right: 0;
+            top: -1px;
+        }
+    }
+
+    .side-scale-item-text {
+        position: absolute;
+        font-family: "PT Sans",sans-serif;
+        bottom: -8px;
+        right: 15px;
+        font-size: 11px;
+        color: #70757a;
+    }
+
+}
+
+.calendar-column {
+    flex-grow: 1;
+    display: flex;
+    box-shadow: 4px 0 2px -2px rgba(0, 0, 0, 0.3);
+
+    .calendar-sub-column {
+        display: flex;
+        flex-grow: 1;
+        flex-direction: column;
+        position: relative;
+        border-right: 1px solid $_borderColor;
+    }
+
+    .calendar-row {
+        border-bottom: 1px solid $_borderColor;
+        flex-grow: 1;
+    }
+
+    .sub-column-header {
+        z-index: $_planFactZindex;
+        position: fixed;
+        text-align: center;
+        left: initial;
+        right: initial;
+        margin: -20px auto;
+        margin-left: 60px;
+        top: initial;
+        font-family: $_fontFamily;
+        color: $_fontColor;
+    }
+}

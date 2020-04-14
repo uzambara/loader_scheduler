@@ -1,0 +1,28 @@
+﻿.pickers-wrapper {
+    display: flex;
+    justify-content: center;
+
+    .date-and-time-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+
+        & > * {
+            margin-bottom: 10px;
+        }
+    }
+
+    .get-report-button {
+        align-self: flex-start;
+    }
+}
+
+.content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.no-data {
+    color: firebrick;
+    text-align: center;
+}

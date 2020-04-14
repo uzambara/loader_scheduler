@@ -1,0 +1,29 @@
+﻿.registration-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid gray;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.back-drop {
+    background-color: rgba(0, 0, 0, 0.2) !important;;
+}
+
+.title {
+    color: $_fontColor;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-input {
+    margin-bottom: 10px;
+}
+
+.buttonsWrapper {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-around;
+}

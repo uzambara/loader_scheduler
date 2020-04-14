@@ -1,0 +1,19 @@
+﻿@mixin arrow {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-top: 2px solid #5f6368;
+    border-left: 2px solid #5f6368;
+}
+
+.backArrow {
+    @include arrow;
+    transform: rotate(-45deg);
+}
+
+.forwardArrow {
+    @include arrow;
+    transform: rotate(135deg);
+}

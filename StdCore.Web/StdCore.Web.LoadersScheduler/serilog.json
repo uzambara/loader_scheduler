@@ -1,0 +1,53 @@
+{
+  "Serilog": {
+    "Using": [ "Serilog.Sinks.File" ],
+    "MinimumLevel": {
+      "Default": "Debug",
+      "Override": {
+        "Microsoft": "Warning",
+        "System": "Warning"
+      }
+    },
+    "WriteTo": [
+      { "Name": "File",
+        "Args": {
+          "path": "logs\\main.txt",
+          "fileSizeLimitBytes": 10000000,
+          "rollOnFileSizeLimit": true,
+          "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] |{SourceContext}| {Message:lj}{NewLine}{Exception}",
+          "shared": true,
+          "flushToDiskInterval": "00:00:01"
+        }
+      },
+      {
+        "Name": "Logger",
+        "Args": {
+          "configureLogger": {
+            "WriteTo": [
+              {
+                "Name": "File",
+                "Args": {
+                  "path": "logs\\errors.txt",
+                  "fileSizeLimitBytes": 10000000,
+                  "rollOnFileSizeLimit": true,
+                  "outputTemplate": "{Timestamp:yyyy-MM-dd HH:mm:ss.fff} [{Level:u3}] |{SourceContext}| {Message:lj}{NewLine}{Exception}",
+                  "shared": true,
+                  "flushToDiskInterval": "00:00:01"
+                }
+              }
+            ],
+            "Filter": [
+              {
+                "Name": "ByIncludingOnly",
+                "Args": {
+                  "expression": "@Level='Error'"
+                }
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "Enrich": ["FromLogContext", "WithThreadId"]
+  }
+}

@@ -1,0 +1,21 @@
+﻿{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "target": "es5",
+    "sourceMap": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "esModuleInterop": true
+
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

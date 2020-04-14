@@ -1,0 +1,9 @@
+﻿bin
+obj
+launchSettings.json
+.idea
+.vs
+node_modules
+build
+logs
+*.csproj.user

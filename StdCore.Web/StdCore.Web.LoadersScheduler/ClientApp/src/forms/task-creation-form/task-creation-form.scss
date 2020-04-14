@@ -1,0 +1,17 @@
+﻿.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content > * {
+    margin-bottom: 25px !important;
+}
+
+.tabs {
+    justify-content: center;
+}
+
+.dialog-actions {
+    justify-content: space-around !important;
+    padding-bottom: 20px !important;
+}

@@ -1,0 +1,25 @@
+﻿.processing {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.error {
+    color: red;
+}
+
+.success {
+    color: green;
+}
+
+.global {
+    position: fixed;
+    top: 40vh;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 100;
+    font-size: 22px;
+    font-family: "PT Sans", sans-serif;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 200px;
+}

@@ -1,0 +1,19 @@
+﻿.navigation-wrapper {
+
+    .navigation-items {
+        margin: 0;
+
+        .navigation-item {
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $_navigationLinkColor;
+            font-family: $_fontFamily;
+            font-weight: bold;
+            margin-right: 15px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

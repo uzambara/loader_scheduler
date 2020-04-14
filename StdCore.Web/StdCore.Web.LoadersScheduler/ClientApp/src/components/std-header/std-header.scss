@@ -1,0 +1,19 @@
+﻿.header-container {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: $_stickyHeaderZindex;
+    padding: 10px 5px 20px;
+
+    .header-navigation {
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .header-top-part {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    min-height: 170px;
+}

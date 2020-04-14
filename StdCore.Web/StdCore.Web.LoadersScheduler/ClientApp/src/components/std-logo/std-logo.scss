@@ -1,0 +1,23 @@
+﻿.logo-wrapper {
+    display: flex;
+    align-items: center;
+    max-height: 38px;
+}
+
+.logo-image {
+    width: 38px;
+    height: 38px;
+}
+
+.logo-title {
+    font-family: $_fontFamily;
+    color: $_fontColor;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+@media screen and (max-width: 750px){
+    .logo-title {
+        @include visually-hidden;
+    }
+}

@@ -1,0 +1,60 @@
+﻿.user-menu-wrapper {
+    border: 1px solid $_bordersColor;
+    padding: 10px 15px;
+    border-radius: 5px;
+    max-height: 38px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.menu {
+    display: none;
+}
+
+.user-menu-wrapper:hover {
+    border: none;
+}
+
+.user-menu-wrapper:hover .menu {
+    display: flex;
+    top: 0;
+    padding-top: 60px;
+    position: absolute;
+    flex-direction: column;
+    padding-left: 40px;
+    width: 100%;
+    left: 0;
+    list-style: none;
+    border: 1px solid $_bordersColor;
+    border-radius: 5px;
+    margin: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.menu-item {
+    width: 100%;
+    padding-bottom: 10px;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.user-image {
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    z-index: 2;
+}
+
+.user-name {
+    z-index: 2;
+}
+
+@media screen and (max-width: 1000px) {
+    justify-self: end;
+}
