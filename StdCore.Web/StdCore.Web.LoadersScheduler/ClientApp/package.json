@@ -34,7 +34,7 @@
     "debounce": "^1.2.0",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.27",
-    "node-sass": "^4.13.0",
+    "node-sass": "^7.0.0",
     "rc-datepicker": "^5.0.14",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
