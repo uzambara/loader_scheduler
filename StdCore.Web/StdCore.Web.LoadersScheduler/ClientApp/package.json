@@ -33,7 +33,7 @@
     "datejs": "^1.0.0-rc3",
     "debounce": "^1.2.0",
     "moment": "^2.24.0",
-    "moment-timezone": "^0.5.27",
+    "moment-timezone": "^0.5.35",
     "node-sass": "^4.13.0",
     "rc-datepicker": "^5.0.14",
     "react": "^16.9.0",
